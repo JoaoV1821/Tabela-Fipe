@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {  
+
+            background-color: rgb(241, 237, 237);
+        }
+
+        header {
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-top: 20mm;
+        }
+
+        h2 {
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10mm;
+        }
+
+        button {
+            margin-top: 20px;
+            margin-left: 46mm;
+            height: 30px;
+            width: 200px;
+            background-color:lightgray;
+        }
+
+        .principal {
+            margin-top: 90px;
+            height: 380px;
+            width: 70px;
+            margin-left: 400px;
+            background-color: white;
+        }
+
+        .input {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10mm;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Tabela fipe</title>
+</head>
+<body>
+    <fieldset class="principal">
+    <header><strong>Tabela fipe</strong></header>
+    <h2>Consulte as informações de seu veículo</h2>
+    <div class="container">
+    <form action="{{url_for('index')}}" method="POST">
+        <section>
+        <fieldset style="width:500px" class="input">
+            <legend>Código fipe</legend>
+            <input type="text" name="name" type='required' pattern="[0-9]{6}-[0-9]" title='O código deve estar no formato XXXXX-X'>
+        </fieldset>
+        <p>
+        </p>
+        <button onclick="">Verificar</button>
+        </section>
+    </fieldset>
+    </form>
+    </div>
+</body>
+</html>

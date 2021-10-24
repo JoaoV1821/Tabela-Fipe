@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Fipe</title>
+    <style>
+
+        body {
+    
+            background-color: rgb(241, 237, 237);
+        }
+
+        fieldset {
+
+            background-color: white;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <fieldset>
+        <header><strong>Informações do veículo</strong></header>
+        <p>Marca :  {{values[0]}} </p>
+        <p>Modelo:  {{values[1]}} </p>
+        <p>Valor :  {{values[2]}} </p>
+    </fieldset>
+   </div>
+</body>
+</html>
