@@ -13,7 +13,7 @@ def index():
         try:
             fipe = Fipe(codigo)
         except Exception as E:
-            return f'<script>alert(`{E}`);</script>'
+            return bad_request(str(E))
         else:
             values = [fipe.marca, fipe.modelo, fipe.valor]
             return pag2(values)
@@ -22,6 +22,11 @@ def index():
 @app.route('/')
 def pag2(values):
     return render_template('pag2.html', values=values)
+
+
+@app.route('/')
+def bad_request(values):
+    return render_template('bad_request.html', values=values)
 
 
 @app.route('/<string:nome>')
