@@ -14,8 +14,8 @@ class Fipe:
         url = f'https://brasilapi.com.br/api/fipe/preco/v1/{codigo}'
         r = requests.get(url)
 
-        if r.status_code == 400 or r.status_code == 0:
-            raise ValueError('Código Fipe inválido')
+        if r.status_code == 400:
+            raise ValueError(f'O Código "{codigo}" é inválido ou inexistente')
         else:
             return r.json()[0]
     
@@ -33,3 +33,4 @@ class Fipe:
     @property
     def modelo(self):
         return self.__modelo
+    
